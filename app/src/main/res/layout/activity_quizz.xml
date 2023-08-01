@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       style="@style/ThemeOverlay.AppCompat.Dark"
+       android:background="@drawable/top_background"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/lavender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Question"
+                android:textColor="@android:color/background_dark"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgQS"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal">
+            </ImageView>
+
+            <RadioGroup
+
+                android:id="@+id/rGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <RadioButton
+                    android:id="@+id/rA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_select_quiz"
+                    android:button="@android:color/transparent"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:id="@+id/rB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_select_quiz"
+                    android:button="@android:color/transparent"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:id="@+id/rC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_select_quiz"
+                    android:button="@android:color/transparent"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:id="@+id/rD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_select_quiz"
+                    android:button="@android:color/transparent"
+                    android:paddingLeft="10dp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/lWrong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Selected Answer:"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/custom_wrong"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtSelect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:paddingLeft="15dp"
+                        android:text="ABCD"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_baseline_cancel_24" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Correct answer:"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/custom_green"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:paddingLeft="15dp"
+                        android:text="ABCD"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_baseline_cancel_24"
+                        app:tint="@android:color/background_light" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="EXPLAINATION: "
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp" />
+
+                <Button
+
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="Next"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
